@@ -4,9 +4,15 @@ FROM alpine
 ## Maintainer info
 MAINTAINER Marcel Bischoff <marcel@herrbischoff.com>
 
+## Add experimental repository
+RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
+
 ## Install Apache and PHP
-RUN apk add --update apache2 php-apache2 php-zip php-xml php-zlib php-opcache php-pdo_odbc php-soap php-pgsql php-pdo php-mysqli php-json php-mcrypt php-openssl && \
+RUN apk add --update apache2 php-apache2 php-zip php-xml php-zlib php-opcache php-pdo_odbc php-soap php-pgsql php-pdo php-mysqli php-json php-mcrypt php-openssl shadow && \
   rm -rf /var/cache/apk/*
+
+## Change Apache UID
+RUN usermod -u 1000 apache
 
 ## Remove PHP version exposure
 RUN sed -ir 's/expose_php = On/expose_php = Off/' /etc/php/php.ini

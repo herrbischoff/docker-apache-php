@@ -1,0 +1,13 @@
+web:
+  build: ./conf
+  ports:
+    - "8000:80"
+  links:
+    - db
+  volumes:
+    - ./app:/var/www/localhost/htdocs
+db:
+  image: mysql
+  environment:
+    MYSQL_ROOT_PASSWORD: root
+    MYSQL_DATABASE: development
