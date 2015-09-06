@@ -2,7 +2,7 @@
 Tiny but full-featured Docker image for local PHP development. I built this because I was unsatisfied with all other Apache Docker images, especially those with PHP included. Either they are setup very opinionated, need you to configure so much that you could simply create an own one from scratch or have file permission problems when running on a non-Linux system. Also, by using Alpine Linux as a base, the resulting image is about 32 MB in size, which is dramatically smaller than most.
 
 * Apache starts in foreground
-* Many modules (including rewriting) enabled
+* Many modules (including rewriting) already enabled
 * `AllowOverwrite All` for changes through `.htaccess`
 * Disabled PHP `X-Powered-By` header
 * Enabled `index.php`
