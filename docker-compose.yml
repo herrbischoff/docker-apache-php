@@ -1,5 +1,5 @@
 web:
-  build: ./conf
+  build: .
   ports:
     - "8000:80"
   links:
