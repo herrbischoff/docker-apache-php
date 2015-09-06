@@ -8,6 +8,7 @@ Tiny but full-featured Docker image for local PHP development. I built this beca
 * Enabled `index.php`
 * Writes all Apache log output to `stdout` (as it should be for a Docker container)
 * Correct file permissions when using AUFS (Mac OS X)
+* HTML5 Boilerplate best practice settings (disabled caching by default, uncomment for production usage)
 
 Feel free to send pull requests to improve on it, change it, fork it, basically do whatever you want with it.
 
