@@ -1,6 +1,8 @@
 # Docker image with Apache 2.4 and PHP 5.6
 Tiny but full-featured Docker image for local PHP development. I built this because I was unsatisfied with all other Apache Docker images, especially those with PHP included. Also, by using Alpine Linux as a base, the resulting image is about 32 MB in size, which is dramatically smaller than most.
 
+Feel free to send pull requests to improve on it, change it, fork it, basically do whatever you want with it.
+
 ## Build
 ```
 docker build --tag herrbischoff/apache-php git://github.com/herrbischoff/docker-apache-php.git
