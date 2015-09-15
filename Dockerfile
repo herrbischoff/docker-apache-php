@@ -8,7 +8,7 @@ MAINTAINER Marcel Bischoff <marcel@herrbischoff.com>
 RUN echo http://nl.alpinelinux.org/alpine/edge/testing >> /etc/apk/repositories
 
 ## Install Apache and PHP
-RUN apk add --update apache2 php-apache2 php-pdo_mysql php-mysqli php-zip php-xml php-zlib php-opcache php-pdo_odbc php-soap php-pgsql php-pdo php-json php-mcrypt php-openssl shadow && \
+RUN apk add --update apache2 php-apache2 php-ctype php-pdo_mysql php-mysqli php-zip php-xml php-zlib php-opcache php-pdo_odbc php-soap php-pgsql php-pdo php-json php-mcrypt php-openssl shadow && \
   rm -rf /var/cache/apk/*
 
 ## Change Apache UID
